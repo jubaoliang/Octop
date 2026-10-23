@@ -1,0 +1,27 @@
+# ===== 民警工作台后端依赖 =====
+# Web 框架
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+
+# ORM / 数据库（PostgreSQL 用 psycopg3 驱动）
+SQLAlchemy>=2.0.25
+psycopg[binary]>=3.1.18
+# 本地/CI 测试用的 SQLite 驱动（Python 自带，无需安装）
+
+# 数据校验
+pydantic>=2.6.0
+pydantic-settings>=2.1.0
+
+# 鉴权
+PyJWT>=2.8.0
+bcrypt>=4.1.0
+# 说明：直接用 bcrypt，不经 passlib —— passlib 1.7.4 读 bcrypt 4.x 的 __about__
+# 会报 AttributeError，绕开它省得以后踩坑。
+
+# 测试
+pytest>=8.0.0
+pytest-asyncio>=0.23.5
+httpx>=0.27.0
+
+# 压测（E-CODE4）
+locust>=2.20.0

@@ -1,0 +1,8 @@
+.env
+*.pyc
+__pycache__/
+.pytest_cache/
+dev.db
+mock_data.json
+*.db
+.venv/
